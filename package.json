@@ -9,6 +9,10 @@
   "author": "phil",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.12",
+    "@babel/preset-env": "^7.13.12",
     "browser-sync": "latest",
     "del": "latest",
     "gulp": "latest",
@@ -32,6 +36,7 @@
     "webp-converter": "2.2.3"
   },
   "dependencies": {
+    "gsap": "^3.6.0",
     "swiper": "^6.5.0"
   }
 }
