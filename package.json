@@ -17,6 +17,8 @@
     "del": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
+    "gulp-babel": "^8.0.0",
+    "gulp-browserify": "^0.5.1",
     "gulp-clean-css": "latest",
     "gulp-file-include": "latest",
     "gulp-fonter": "latest",

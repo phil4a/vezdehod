@@ -1,3 +1,8 @@
+import { Swiper, EffectFade, Navigation, Pagination, Scrollbar, Controller, Parallax, Mousewheel } from 'swiper'
+Swiper.use([EffectFade, Navigation, Pagination, Scrollbar, Controller, Parallax, Mousewheel])
+
+import { gsap, Power2 } from 'gsap'
+
 document.addEventListener('DOMContentLoaded', () => {
 
    const swiperImg = new Swiper('.slider-img', {

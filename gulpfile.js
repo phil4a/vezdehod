@@ -46,7 +46,9 @@ let { src, dest } = require('gulp'),
    ttf2woff = require('gulp-ttf2woff'),
    ttf2woff2 = require('gulp-ttf2woff2'),
    fonter = require('gulp-fonter'),
-   ghPages = require('gulp-gh-pages');
+   ghPages = require('gulp-gh-pages'),
+   babel = require("gulp-babel"),
+   browserify = require('gulp-browserify');
 
 function browserSync() {
    browsersync.init({
@@ -102,6 +104,12 @@ function js() {
             extname: ".min.js"
          })
       )
+      .pipe(babel({
+         presets: ['@babel/env']
+      }))
+      .pipe(browserify({
+         insertGlobals: true,
+      }))
       .pipe(dest(path.build.js))
       .pipe(browsersync.stream())
 }
@@ -135,6 +143,7 @@ function fonts() {
       .pipe(ttf2woff2())
       .pipe(dest(path.build.fonts))
 }
+
 
 //Manual tasks
 
