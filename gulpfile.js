@@ -98,18 +98,18 @@ function js() {
    return src(path.src.js)
       .pipe(fileinclude())
       .pipe(dest(path.build.js))
+      .pipe(babel({
+         presets: ['env'],
+      }))
+      .pipe(browserify({
+         insertGlobals: false,
+      }))
       .pipe(uglify())
       .pipe(
          rename({
             extname: ".min.js"
          })
       )
-      .pipe(babel({
-         presets: ['@babel/env']
-      }))
-      .pipe(browserify({
-         insertGlobals: true,
-      }))
       .pipe(dest(path.build.js))
       .pipe(browsersync.stream())
 }
