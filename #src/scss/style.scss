@@ -45,6 +45,9 @@ $md4: 479.98;
 @import "null";
 //Импорт стиля swiper(после npm i swiper)
 @import "../../node_modules/swiper/swiper-bundle";
+@import "micromodal";
+@import "modal";
+
 html {
 	height: 100%;
 }
